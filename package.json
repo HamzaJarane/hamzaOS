@@ -37,7 +37,7 @@
     "react-helmet": "^6.1.0",
     "react-mouse-select": "^1.1.2",
     "react-pdf": "^9.1.0",
-    "react-rnd": "^10.4.11",
+    "react-rnd": "10.4.4",
     "styled-components": "^6.1.11",
     "tw-colors": "^3.3.1",
     "tw-to-css": "^0.0.12",

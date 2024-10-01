@@ -26,12 +26,9 @@ const allowedFolders = [
 
 try {
     allowedFolders.forEach((allowedFolder) => {
-        const files = fs.readdirSync(
-            `${__dirname}/../public/static/${allowedFolder.name}`,
-            {
-                withFileTypes: true,
-            }
-        );
+        const dir = `${__dirname}/../public/static/${allowedFolder.name}`;
+        if(!fs.existsSync(dir)) return;
+        const files = fs.readdirSync(dir, { withFileTypes: true });
 
         allowedFolder.files = files.map((file) => {
             let size = 0;
