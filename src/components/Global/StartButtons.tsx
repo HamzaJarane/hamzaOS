@@ -18,7 +18,7 @@ function StartButtons() {
             </Button>
 
             <Button 
-                onClick={() => window.location.assign('https://cyyc.lol')}
+                onClick={() => window.location.assign('https://hamza.im')}
                 css={[
                     baseColor !== 'green' ? tw`bg-base-600 border-base-600 shadow-base-700` :
                     tw`bg-red-600 border-red-600 shadow-red-700`

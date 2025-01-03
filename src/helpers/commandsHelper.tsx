@@ -80,7 +80,7 @@ export const commands: { command: string, outputs: React.ReactNode[] }[] = [
     {
         command: 'about',
         outputs: [
-            <pre>My name is Hamza, I'm a 20 year old web developer from Morocco,</pre>,
+            <pre>My name is Hamza, I'm a 21 year old web developer from Morocco,</pre>,
             <pre>I write code in React.js, Vue.js, Next.js, Laravel, and Tailwind CSS.</pre>,
         ]
     },
@@ -89,8 +89,8 @@ export const commands: { command: string, outputs: React.ReactNode[] }[] = [
         outputs: [
             <div>
                 <div><Link href="https://www.linkedin.com/in/hamza-jarane-b05511264/" target="_blank"><GreenSpan css={tw`hover:underline`}>Linkedin</GreenSpan></Link></div>
-                <div><Link href="https://github.com/Cyclops789/" target="_blank"><GreenSpan css={tw`hover:underline`}>Github</GreenSpan></Link></div>
-                <div><Link href="mailto:hi@cyyc.lol" target="_blank"><GreenSpan css={tw`hover:underline`}>Email</GreenSpan></Link></div>
+                <div><Link href="https://github.com/HamzaJarane/" target="_blank"><GreenSpan css={tw`hover:underline`}>Github</GreenSpan></Link></div>
+                <div><Link href="mailto:contact@hamza.im" target="_blank"><GreenSpan css={tw`hover:underline`}>Email</GreenSpan></Link></div>
             </div>
         ]
     },
@@ -98,7 +98,7 @@ export const commands: { command: string, outputs: React.ReactNode[] }[] = [
         command: "source-code",
         outputs: [
             <div>
-                <div><Link href="https://github.com/Cyclops789/cyyc12" target="_blank"><GreenSpan css={tw`hover:underline`} >https://github.com/Cyclops789/cyyc12</GreenSpan></Link></div>
+                <div><Link href="https://github.com/HamzaJarane/hamzaOS" target="_blank"><GreenSpan css={tw`hover:underline`} >https://github.com/HamzaJarane/hamzaOS</GreenSpan></Link></div>
             </div>
         ]
     },

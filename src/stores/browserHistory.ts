@@ -3,7 +3,7 @@ import { DEFAULT_HISTORY_URL } from '@/helpers/historyHelper';
 
 export const bookMarks = [
     DEFAULT_HISTORY_URL,
-    'https://cyyc.lol',
+    'https://hamza.im',
     'https://www.wikipedia.org/',
 ] as const;
 

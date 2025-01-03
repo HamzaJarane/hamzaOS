@@ -1,5 +1,5 @@
 /*
- written by: Lawrence McDaniel / FullStackWithLawrence and Cyclops (Typing)
+ written by: Lawrence McDaniel / FullStackWithLawrence and HamzaJarane (Typing)
 
  This is a refactored implementation of the Matrix Raining Letters effect based on this blog post
  https://dev.to/javascriptacademy/matrix-raining-code-effect-using-javascript-4hep

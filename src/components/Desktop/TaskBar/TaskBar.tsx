@@ -3,7 +3,7 @@ import { useWindowsStore } from '@/stores/windows'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useCommandsStore } from '@/stores/commands';
 import { useFoldersStore } from '@/stores/folders';
-import Cat from '@/assets/cat.svg?react';
+import Hat from '@/assets/hat.svg?react';
 import { lazy, useMemo, useState } from 'react';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import useThemeStore from '@/styles/useThemeStore';
@@ -99,7 +99,7 @@ function TaskBar() {
                             tw`absolute -top-1 w-full h-[3px] bg-base-700`,
                             (activeWindow === 'startmenu' || isStartMenuSticky) && tw`!top-0`
                         ]} />
-                        <Cat fill={rbgAt700} css={tw`w-[33px]`} />
+                        <Hat fill={rbgAt700} css={tw`w-[33px]`} />
                     </div>
 
                     {windows?.filter((gWindow) => !gWindow.window.hidden.taskBar).map((gWindow, index) => (

@@ -43,7 +43,7 @@ export default function App() {
       <DesktopHandler {...{ selectAbleContainerRef }}>
         <Desktop {...{ selectAbleContainerRef }} />
         <Meta>
-          <title>Cyyc12{(activeWindow && activeWindow !== 'startmenu' && activeWindow !== 'icons') ? ` - ${activeWindow.charAt(0).toUpperCase() + activeWindow.slice(1)}` : ''}</title>
+          <title>hamzaOS{(activeWindow && activeWindow !== 'startmenu' && activeWindow !== 'icons') ? ` - ${activeWindow.charAt(0).toUpperCase() + activeWindow.slice(1)}` : ''}</title>
         </Meta>
         <Container>
           <Background />

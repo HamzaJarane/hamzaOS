@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Cat from '@/assets/cat.svg?react';
+import Hat from '@/assets/hat.svg?react';
 import { useGeneralStore } from '@/stores/general';
 import tw from 'twin.macro';
 import useThemeStore from '@/styles/useThemeStore';
@@ -23,7 +23,7 @@ function Loading({ children }: Props) {
                     loaded && tw`h-0 opacity-0`,
                 ]}
             >
-                <Cat
+                <Hat
                     fill={rbgAt600}
                     css={tw`w-[40%] lg:w-[20%]`}
                 />
@@ -35,7 +35,7 @@ function Loading({ children }: Props) {
                         color: rbgAt600,
                     }}
                 >
-                    Cyyc12
+                    hamzaOS
                 </div>
             </div>
             {loaded && children}
