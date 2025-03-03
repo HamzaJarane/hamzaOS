@@ -6,6 +6,7 @@ import { useRef, useState, useEffect, useMemo, useCallback, memo } from 'react';
 import { loader } from '@monaco-editor/react';
 import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker';
 import jsonWorker from 'monaco-editor/esm/vs/language/json/json.worker?worker';
+// import tsWorker from 'monaco-editor/esm/vs/language/typescript/ts.worker?worker';
 
 self.MonacoEnvironment = {
     getWorker(_, label) {
@@ -27,7 +28,7 @@ function EditorEditor() {
     const [cachedFiles, setCachedFiles] = useState<{ data: string, staticPath: string, ext: string }[]>([]);
 
     const file = useMemo(() => {
-        return (getFileOfType(['.json', '.txt']) as NewFile | null) || { data: "", ext: ".txt", staticPath: "" };
+        return (getFileOfType(['.json', '.txt', '.js']) as NewFile | null) || { data: "", ext: ".txt", staticPath: "" };
     }, [selectedFiles]);
 
     const createEditor = useCallback((data: string, ext: string, model: monaco.editor.ITextModel) => {

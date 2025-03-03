@@ -35,7 +35,7 @@ export type allowedExtensions =
     '.mp3' |
 
     // Text or ReadAble files
-    '.json' | '.pdf' | '.txt';
+    '.json' | '.pdf' | '.txt' | '.js';
 
 export const foldersStructure: FoldersStructure = {
     "desktop": {
@@ -99,6 +99,7 @@ export const getWindowNameFromExt = (ext: allowedExtensions): AvailableWindows =
 
         case '.json':
         case '.txt':
+        case '.js':
             return 'editor';
 
         case '.pdf':
