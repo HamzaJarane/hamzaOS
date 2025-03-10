@@ -9,7 +9,7 @@ import Background from "@/components/Desktop/Backgrounds";
 import useThemeStore from "@/styles/useThemeStore";
 import tw, { styled } from 'twin.macro';
 import { loadBrowserDetectorAssets } from "./helpers/assetsHelper";
-import useAsynced from "./helpers/hooks/useAsynced";
+import useInvoke from "./helpers/hooks/useInvoke";
 
 declare global {
   interface Window {
@@ -35,7 +35,7 @@ export default function App() {
 
   useEffect(() => {
     console.log("[INFO] Importing browser detector assets")
-    useAsynced(async () => await loadBrowserDetectorAssets());
+    useInvoke(async () => await loadBrowserDetectorAssets());
   }, []);
 
   return (

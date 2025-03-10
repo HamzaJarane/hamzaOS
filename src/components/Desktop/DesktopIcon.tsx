@@ -26,7 +26,12 @@ const IconContainer = styled.div`
     }
 `;
 
-type Props = { children: React.ReactNode, title: AvailableWindows, css?: CSSProp | undefined, className?: string };
+type Props = { 
+    children: React.ReactNode, 
+    title: AvailableWindows, 
+    css?: CSSProp | undefined, 
+    className?: string,
+};
 
 function DesktopIcon({ children, css, title, className }: Props) {
     const iconContainerRef = useRef<HTMLDivElement>(null);

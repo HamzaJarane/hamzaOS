@@ -77,7 +77,7 @@ function DesktopHandler({ children, selectAbleContainerRef }: Props) {
             return (
                 <div css={tw`w-screen h-screen flex justify-center items-center`}>
                     <div>
-                        <div css={tw`sm:hidden text-center text-white px-2 mb-4`}>This website works better on desktop, click the {baseColor === 'green' ? 'red' : baseColor} button to get to the mobile portofolio.</div>
+                        <div css={tw`sm:hidden text-center text-white px-2 mb-4`}>This website works better on desktop, click the {baseColor === 'green' ? 'red' : baseColor} button to get to the mobile portfolio.</div>
                         <StartButtons />
                     </div>
                 </div>

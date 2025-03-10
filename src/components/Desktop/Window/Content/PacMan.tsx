@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import tw from 'twin.macro';
 import { loadPacManAssets } from '@/helpers/assetsHelper';
-import useAsynced from '@/helpers/hooks/useAsynced';
+import useInvoke from '@/helpers/hooks/useInvoke';
 
 declare global {
     interface Window {
@@ -17,7 +17,7 @@ function Pacman() {
     const pacmanRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        useAsynced(async () => {
+        useInvoke(async () => {
             await loadPacManAssets().then(() => {
                 if (pacmanRef.current) {
                     try {

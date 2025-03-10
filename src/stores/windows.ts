@@ -1,10 +1,11 @@
 import { type LazyExoticComponent, type MemoExoticComponent, lazy } from 'react';
 import { create } from 'zustand'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faTerminal, faGamepad, faGears, faUser, faGlobe, faDiceD6, faUserAlt, faGhost, faFolder, faFilm, faMusic, faPenToSquare, faFilePdf, faImage } from '@fortawesome/free-solid-svg-icons';
+import { faTerminal, faGamepad, faGears, faUser, faGlobe, faDiceD6, faUserAlt, faGhost, faFolder, faFilm, faMusic, faPenToSquare, faFilePdf, faImage, faBlog } from '@fortawesome/free-solid-svg-icons';
 
 const Terminal = lazy(() => import("@/components/Desktop/Window/Content/Terminal"));
 const Portfolio = lazy(() => import("@/components/Desktop/Window/Content/Portfolio"));
+const Blog = lazy(() => import("@/components/Desktop/Window/Content/Blog"));
 const IceFox = lazy(() => import("@/components/Desktop/Window/Content/IceFox"));
 const PacMan = lazy(() => import("@/components/Desktop/Window/Content/PacMan"));
 const Explorer = lazy(() => import("@/components/Desktop/Window/Content/Explorer"));
@@ -51,6 +52,7 @@ export type AvailableWindows =
     | 'image'
     | 'startmenu'  // Just to track clicks
     | 'icons'      // Just to prevent UserSelection from starting inside an icon
+    | 'blog'
     ;
 
 export type WindowSize = { width: number, height: number };
@@ -110,6 +112,39 @@ export interface IGeneralStore {
 
 export const useWindowsStore = create<IGeneralStore>((set) => ({
     windows: [
+        {
+            window: {
+                name: 'blog',
+                category: 'personal',
+                open: false,
+                minimize: undefined,
+                fullscreen: false,
+                order: 1,
+                functions: {
+                    minimize: () => { },
+                    close: () => { },
+                },
+                size: {
+                    width: 1200,
+                    height: 650,
+                },
+                hidden: {
+                    desktop: false,
+                    startMenu: false,
+                    taskBar: false,
+                },
+                smallTask: false,
+                hoverSmallTask: false,
+            },
+            windowChildren: Blog,
+            desktop: {
+                className: '',
+                child: {
+                    icon: faBlog,
+                    css: 'font-size:40px;',
+                },
+            }
+        },
         {
             window: {
                 name: 'portfolio',

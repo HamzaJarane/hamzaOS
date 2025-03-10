@@ -52,11 +52,16 @@ function Desktop({ selectAbleContainerRef }: Props) {
     return (
         <div
             onMouseDown={() => updateActiveWindow(undefined)}
-            css={tw`z-[9] fixed w-screen h-screen`}
+            ref={selectAbleContainerRef} 
+            css={tw`z-[9] fixed h-screen w-screen`}
         >
-            <div ref={selectAbleContainerRef} css={tw`h-screen space-y-2`}>
+            <div css={tw`grid grid-cols-2 gap-2 h-fit w-fit`}>
                 {currentWindows.filter((fWindow) => !fWindow.window.hidden.desktop).map((fWindow, index) => (
-                    <DesktopIcon key={`${index}-${fWindow.window.name}`} title={fWindow.window.name} css={tw`${fWindow.desktop.className || ''}`}>
+                    <DesktopIcon 
+                        key={`${index}-${fWindow.window.name}`} 
+                        title={fWindow.window.name} 
+                        css={tw`${fWindow.desktop.className || ''}`}
+                    >
                         <FontAwesomeIcon css={`${fWindow.desktop.child.css || ''}`} icon={fWindow.desktop.child.icon} />
                     </DesktopIcon>
                 ))}

@@ -3,7 +3,7 @@ import type Webamp from "webamp";
 import { useFoldersStore } from "@/stores/folders";
 import { useWindowsStore } from "@/stores/windows";
 import { loadWebAmpAssets } from "@/helpers/assetsHelper";
-import useAsynced from "@/helpers/hooks/useAsynced";
+import useInvoke from "@/helpers/hooks/useInvoke";
 
 declare global {
     interface Window {
@@ -36,7 +36,7 @@ function WebampPlayer() {
 
     useEffect(() => {
         if (!webamp.current && divRef.current) {
-            useAsynced(async () => {
+            useInvoke(async () => {
                 await loadWebAmpAssets().then(() => {
                     if(!window.Webamp.browserIsSupported()) {
                         return console.error("[INFO] webamp is not supported in this browser");
